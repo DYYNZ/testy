@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>SEAL HARMONY</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="style.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Keania+One&family=Montserrat:wght@300;400;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="header">
+        <h1>S E A L</h1> 
+        <h2>-HARMONY-</h2>
+    </div>
+    
+    <div class="nav">
+        <div class="links">
+            <a href="#">HOME</a>
+            <button onclick="window.location.href='shop.html'">PRODUK</button>
+            <a href="about.html">TENTANG KAMI</a>
+        </div>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/seal_harmony.id?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://wa.me/6285714018453" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://www.tiktok.com/@seal_harmony?_t=8qQDzwHAhXh&_r=1" target="_blank">
+                <i class="fab fa-tiktok"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="content fade-in">
+        <div class="stars"></div>
+        <div class="content-inner">
+            <h3>Dunia Harmoni yang Segar!</h3>
+            <p>Rasakan harumnya parfum yang segar dan menawan meningkatkan rasa percaya diri anda!</p>
+            <p>Dengan desain yang menarik dan moderen, serta kualitas parfum terbaik, anda tidak perlu ragu untuk memilih parfum seal harmony</p>
+        </div>
+    </div>
+
+    <div class="section fade-in">
+        <div class="stars"></div>
+        <div class="section-inner">
+            <h2>NILAI-NILAI</h2>
+            <p>Di Seal Harmony, toko ritel parfum kami dibangun atas dasar semangat dan keaslian. Kami percaya dalam merayakan individualitas setiap pelanggan, menyediakan beragam koleksi wewangian yang selaras dengan kepribadian dan gaya unik mereka...</p>
+        </div>
+    </div>
+
+     
+
+    <div class="section" id="our-products">
+        <h2>OUR PRODUCTS</h2>
+        <div class="products">
+            <img alt="Perfume bottle 1" height="200" src="seal1.jpeg" width="150"/>
+            <img alt="Perfume bottle 2" height="200" src="seal2.jpeg" width="150"/>
+            <img alt="Perfume bottle 3" height="200" src="seal5.jpeg" width="150"/>
+            <img alt="Perfume bottle 4" height="200" src="seal6.jpeg" width="150"/>
+        </div>
+    </div>
+
+    <div class="cta">
+      <a href="https://www.tiktok.com/@seal_harmony?_t=8qaXN4ludIP&_r=1">Belanja Sekarang!</a>
+  </div>
+
+    <div class="testimonials">
+        <h3>Apa Kata Pelanggan?</h3>
+        <div class="testimonial-container">
+            <div class="testimonial">
+                <p>"Parfumnya wangi banget, tahan lama, dan harganya terjangkau! Saya suka!"</p>
+                <div class="author">- Wilie Salim</div>
+            </div>
+            <div class="testimonial">
+                <p>"Desainnya elegan dan modern, cocok untuk semua kesempatan. Saya rekomendasikan!"</p>
+                <div class="author">- M. Rafi</div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="logo">
+                <h1 class="logo-text">SEAL HARMONY</h1>
+            </div>
+            <div class="contact-info">
+                <div><i class="fas fa-envelope"></i> sealharmony5@gmail.com</div>
+                <div><i class="fas fa-phone"></i> +62-857-1401-8453</div>
+                <div><i class="fas fa-map-marker-alt"></i> Keresek / Tangerang / Banten</div>
+                <a href="#" class="quote-button">Get a quote</a>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/seal_harmony.id" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://wa.me/6285714018453" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://www.tiktok.com/@seal_harmony" target="_blank">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const produkButton = document.querySelector(".nav .links button");
+        produkButton.addEventListener("click", () => {
+            produkButton.style.opacity = "0.5";
+            setTimeout(() => {
+                window.location.href = "shop.html";
+            }, 300);
+        });
+
+        // Intersection Observer untuk animasi scroll
+        const observerOptions = {
+            root: null,
+            threshold: 0.1,
+            rootMargin: '0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    
+                    // Tambahkan delay untuk gambar
+                    if (entry.target.tagName === 'IMG') {
+                        const delay = Array.from(entry.target.parentNode.children).indexOf(entry.target) * 200;
+                        entry.target.style.transitionDelay = `${delay}ms`;
+                    }
+                }
+            });
+        }, observerOptions);
+
+        // Observe semua elemen yang perlu dianimasi
+        document.querySelectorAll('.fade-in, .content, .section, .images img, .products img, .testimonial').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

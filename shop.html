@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEAL HARMONY - Best Selling Products</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Keania+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header fade-in">
+        <div class="logo">
+            <h1 class="keania-one-regular">SEAL HARMONY</h1>
+        </div>
+        <nav>
+            <a href="index.html">HOME</a>
+            <a href="shop.html">PRODUK</a>
+            <a href="about.html">ABOUT US</a>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb fade-in">
+        <a href="index.html">Home</a> /
+        <a href="shop.html">Products</a>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <h1 class="fade-in">Products</h1>
+        <div class="product-grid">
+            <!-- Product 1 -->
+            <div class="product-card fade-in-left">
+                <a href="https://vt.tokopedia.com/t/ZS2EDw6pD/" target="_blank">
+                    <img alt="scandalous" src="SCANDAL.jpeg"/>
+                </a>
+                <h2>Scandalous</h2>
+                <div class="size">35ml</div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card fade-in-right">
+                <a href="https://vt.tokopedia.com/t/ZSjYjkAuc/" target="_blank">
+                    <img alt="Black opium" src="seal3.jpeg"/>
+                </a>
+                <h2>Black Opium</h2>
+                <div class="size">35ml</div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card fade-in-left">
+                <a href="https://vt.tokopedia.com/t/ZSjYjFQBT/" target="_blank">
+                    <img alt="So sexy" src="seal4.jpeg"/>
+                </a>
+                <h2>So Sexy</h2>
+                <div class="size">35ml</div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card fade-in-right">
+                <a href="https://vt.tokopedia.com/t/ZSjYj1KdK/" target="_blank">
+                    <img alt="Amber" src="seal7.jpeg"/>
+                </a>
+                <h2>Amber</h2>
+                <div class="size">35ml</div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="product-card fade-in-left">
+                <a href="https://vt.tokopedia.com/t/ZSjYjRXE1/ " target="_blank">
+                    <img alt="Moris" src="seal8.jpeg"/>
+                </a>
+                <h2>Moris</h2>
+                <div class="size">35ml</div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="product-card fade-in-right">
+                <a href="https://vt.tokopedia.com/t/ZSjYjReN9/" target="_blank">
+                    <img alt="Vanila" src="VANILA.jpeg"/>
+                </a>
+                <h2>Vanila</h2>
+                <div class="size">35ml</div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="logo">
+                <h1 class="logo-text">SEAL HARMONY</h1>
+            </div>
+            <div class="contact-info">
+                <div class="email">sealharmony5@gmail.com</div>
+                <div><a class="quote-button" href="#">Get a quote</a></div>
+                <div class="phone">+62-857-1401-8453</div>
+                <div class="location">keresek / Tangerang / Banten</div>
+            </div>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/seal_harmony.id" target="_blank">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://wa.me/6285714018453" target="_blank">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://www.tiktok.com/@seal_harmony" target="_blank">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const fadeElements = document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            fadeElements.forEach(element => {
+                observer.observe(element);
+            });
+        });
+    </script>
+</body>
+</html>
