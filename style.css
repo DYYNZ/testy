@@ -814,3 +814,116 @@ html {
         transform: translateY(-100px);
     }
 }
+
+/* Media Queries untuk Mobile */
+@media (max-width: 768px) {
+    /* Header */
+    .header h1 { 
+        font-size: 40px; /* Ukuran font lebih kecil */
+        padding: 0 15px;
+    }
+    .header h2 { 
+        font-size: 24px;
+        padding: 0 15px;
+    }
+    
+    /* Content & Section */
+    .content, .section {
+        padding: 40px 15px;
+        margin: 30px 10px;
+        border-radius: 15px;
+    }
+    
+    .content-inner, .section-inner {
+        padding: 20px;
+    }
+    
+    .content h3 {
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 25px;
+    }
+    
+    /* Navigation */
+    .nav {
+        padding: 10px;
+    }
+    
+    .nav .links a,
+    .nav .links button {
+        font-size: 14px;
+        padding: 8px 12px;
+        width: 100%; /* Full width buttons */
+        text-align: center;
+        margin-bottom: 5px;
+    }
+    
+    /* Images & Products */
+    .images, .products {
+        padding: 15px;
+        gap: 15px;
+    }
+    
+    .images img {
+        width: 100%; /* Full width */
+        max-width: 300px;
+    }
+    
+    .products img {
+        width: 45%; /* 2 products per row */
+        max-width: 150px;
+    }
+    
+    /* Testimonials */
+    .testimonial {
+        padding: 20px;
+        margin: 10px;
+    }
+    
+    /* Footer */
+    .footer .container {
+        padding: 0 15px;
+    }
+    
+    .footer .logo-text {
+        font-size: 1.5rem;
+    }
+    
+    .footer .quote-button {
+        padding: 12px 25px;
+        font-size: 1rem;
+        width: 100%;
+        max-width: 280px;
+    }
+}
+
+/* Media Queries untuk Extra Small Devices */
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 32px;
+    }
+    
+    .header h2 {
+        font-size: 20px;
+    }
+    
+    .content h3,
+    .section h2 {
+        font-size: 1.8rem;
+    }
+    
+    .content p,
+    .section p {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+    
+    .products img {
+        width: 100%; /* 1 product per row */
+        max-width: 200px;
+    }
+}
